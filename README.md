@@ -122,10 +122,3 @@ Warnings are shown for entries with malformed timestamps or missing coordinates 
 1. Paste birdlog notes into the input box on the left
 2. Click **Convert** to preview parsed observations on the right
 3. Click **Download CSV** to save the file, then import it into eBird via [eBird Imports](https://ebird.org/import/upload.form)
-
-## File structure
-
-```
-birdlog_converter.html   # The entire tool — HTML, CSS, and JS in one file
-README.md                # This documentation
-```

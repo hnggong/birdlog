@@ -6,7 +6,7 @@ A browser-based tool that converts birdlog notes, recorded via iPhone Shortcuts,
 
 Birdlog is a two-part system:
 
-1. **iPhone Shortcut**: captures a voice recording of a bird observation and appends a structured 4-line entry to a Notes file, including timestamp, the voice-dictated species name, and locality string with GPS coordinates.
+1. **[iPhone Shortcut]https://www.icloud.com/shortcuts/92799c91914e4def878b1b4804599278**: captures a voice recording of a bird observation and appends a structured 4-line entry to a Notes file, including timestamp, the voice-dictated species name, and locality string with GPS coordinates.
 
 2. **Birdlog Converter**: a single HTML file that runs entirely in the browser. Paste your birdlog notes into the input box, click Convert, get a live preview of the parsed observations, and download a CSV in eBird Record Format (Extended) for eBird import.
 

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>birdlog converter</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; padding: 45px 40px; color: #000; overflow: hidden; }
+
+  #layout { display: flex; align-items: flex-start; gap: 32px; }
+
+  #left-pane { flex: 0 0 28%; }
+  #right-col { flex: 1 1 0; min-width: 0; }
+
+  .pane-header { display: flex; justify-content: space-between; align-items: baseline; height: 22px; margin-bottom: 6px; position: relative; }
+  .pane-label { font-size: 15.6px; color: #666; }
+  #status { font-size: 15.6px; }
+
+  textarea,
+  #right-pane {
+    height: 450px;
+    font-family: Arial, sans-serif;
+    font-size: 15.6px;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #000;
+    resize: none;
+    display: block;
+  }
+
+  #right-pane {
+    width: 100%;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+
+  button { margin-top: 12px; margin-right: 8px; padding: 8px 20px; font-family: Arial, sans-serif; font-size: 15.6px; background: #fff; color: #00f; border: 1px solid #00f; cursor: pointer; }
+  button:hover { background: #00f; color: #fff; }
+
+  #warnings { padding: 8px 12px 0 12px; }
+  .warn { color: red; font-size: 14px; margin-top: 4px; }
+
+  table { border-collapse: collapse; font-family: Arial, sans-serif; font-size: 15.6px; width: 100%; table-layout: auto; }
+  th { background: #f5f5f5; color: #000; padding: 7px 10px; text-align: left; border-bottom: 2px solid #000; white-space: nowrap; width: 1%; }
+  td { padding: 6px 10px; border-bottom: 1px solid #ddd; white-space: nowrap; width: 1%; }
+  th.col-location, td.col-location { width: auto; overflow: hidden; text-overflow: ellipsis; max-width: 0; }
+  tr:last-child td { border-bottom: none; }
+</style>
+</head>
+<body>
+<div id="layout">
+
+  <div id="left-pane">
+    <div class="pane-header">
+      <span style="font-size:20px; color:#000; font-weight:normal; position:relative; top:-3px;">birdlog converter</span>
+    </div>
+    <textarea id="input"></textarea>
+    <div>
+      <button onclick="convert()">Convert</button>
+      <button onclick="convertAndDownload()">Download CSV</button>
+    </div>
+  </div>
+
+  <div id="right-col">
+    <div class="pane-header">
+      <span class="pane-label">output</span>
+      <span id="status"></span>
+    </div>
+    <div id="right-pane">
+      <div id="warnings"></div>
+      <table id="preview" style="display:none">
+        <thead><tr>
+          <th>#</th>
+          <th>Species</th>
+          <th>Count</th>
+          <th class="col-location">Location</th>
+          <th>Lat</th>
+          <th>Long</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr></thead>
+        <tbody id="preview-body"></tbody>
+      </table>
+    </div>
+    <div style="margin-top:80px; font-size:11px; color:#aaa; text-align:right;"><a href="https://github.com/hnggong/birdlog/blob/main/README.md" style="color:#aaa; display:block;" target="_blank">Read documentation</a>Created by Haoning Gong, last updated 18 Mar 2026.</div>
+  </div>
+
+</div>
+
+<script>
+let csvRows = [];
+let csvFilename = 'birdlog_ebird.csv';
+
+const SPOKEN = [['one ', 1], ['to ', 2], ['free ', 3], ['for ', 4], ['ate ', 8]];
+const SKIP_WORDS = new Set(['free', 'for', 'to', 'one', 'ate']);
+
+function formatCoord(str) { return parseFloat(str.trim()).toFixed(4); }
+
+function formatLocality(locality) {
+  const m = locality.match(/\(([^,]+),([^)]+)\)$/);
+  if (!m) return locality;
+  return locality.slice(0, m.index) + `(${formatCoord(m[1])},${formatCoord(m[2])})`;
+}
+
+function splitByPlus(spoken) {
+  return spoken
+    .split(/\s+plus\s+|\s*\+\s*/i)
+    .map(s => s.trim())
+    .filter(s => s.length > 0 && s.toLowerCase() !== 'remove');
+}
+
+function containsPlus(spoken) {
+  return /\s+plus\s+|\s*\+\s*/i.test(spoken);
+}
+
+function processSpeciesToken(token, locality, dd, MM, yyyy, hh, mm, warnings) {
+  let speciesname = token;
+  let spoken_count = null;
+  for (const [word, count] of SPOKEN) {
+    if (speciesname.toLowerCase().startsWith(word)) {
+      speciesname = speciesname.slice(word.length).trim();
+      spoken_count = count;
+      break;
+    }
+  }
+  if (!speciesname || /^\d+$/.test(speciesname) || SKIP_WORDS.has(speciesname.toLowerCase()) || speciesname.toLowerCase() === 'test') {
+    return null;
+  }
+  let column_d = 1;
+  const numMatch = speciesname.match(/^(\d+)(.+)$/);
+  if (numMatch) { column_d = parseInt(numMatch[1]); speciesname = numMatch[2].trim(); }
+  else if (spoken_count !== null) { column_d = spoken_count; }
+  const ns = speciesname.replace(/ /g, '');
+  if (ns.length === 4 && /^[a-zA-Z]+$/.test(ns)) speciesname = ns.toUpperCase();
+  const coordMatch = locality.match(/\(([^,]+),([^)]+)\)$/);
+  if (!coordMatch) { warnings.push(`No coordinates in: "${locality}" — skipped`); return null; }
+  return [
+    speciesname, '', '', column_d, '', formatLocality(locality),
+    formatCoord(coordMatch[1]), formatCoord(coordMatch[2]),
+    `${MM}/${dd}/${yyyy}`, `${hh}:${mm}`, '', '', 'incidental', '', '', '', '', '', 'Checklist created with <a href="https://github.com/hnggong/birdlog" target="_blank">birdlog</a>'
+  ];
+}
+
+function parseRecords() {
+  const lines = document.getElementById('input').value.split('\n').map(l => l.trimEnd());
+  const warnings = [], entries = [], dates = [];
+  let i = 0;
+  while (i < lines.length) {
+    if (lines[i].trim() === '' || lines[i].trim() === '---') { i++; continue; }
+    if (i + 3 > lines.length) break;
+    const recordtime = lines[i].trim();
+    const spokenRaw = lines[i+1].trim();
+    const locality = lines[i+2].trim();
+    const parts = recordtime.split('_');
+    if (parts.length !== 5) {
+      i += 4; continue;
+    }
+    const [dd, MM, yyyy, hh, mm] = parts;
+    try { dates.push(new Date(parseInt(yyyy), parseInt(MM)-1, parseInt(dd))); } catch(e) {}
+    if (containsPlus(spokenRaw)) {
+      const tokens = splitByPlus(spokenRaw);
+      if (tokens.length === 0) { entries.push({ type: 'skip' }); }
+      else { entries.push({ type: 'multi', tokens, locality, dd, MM, yyyy, hh, mm }); }
+    } else {
+      let speciesname = spokenRaw;
+      let spoken_count = null;
+      for (const [word, count] of SPOKEN) {
+        if (speciesname.toLowerCase().startsWith(word)) {
+          speciesname = speciesname.slice(word.length).trim();
+          spoken_count = count; break;
+        }
+      }
+      if (!speciesname || /^\d+$/.test(speciesname) || SKIP_WORDS.has(speciesname.toLowerCase()) || speciesname.toLowerCase() === 'test') {
+        entries.push({ type: 'skip' });
+      } else if (speciesname.toLowerCase() === 'remove') {
+        entries.push({ type: 'remove' });
+      } else {
+        entries.push({ type: 'valid', speciesname, locality, dd, MM, yyyy, hh, mm, spoken_count });
+      }
+    }
+    i += 4;
+  }
+  const filtered = entries.filter(e => e.type !== 'skip');
+  const records = [];
+  const rowCounts = [];
+  for (const entry of filtered) {
+    if (entry.type === 'remove') {
+      if (rowCounts.length) { const n = rowCounts.pop(); records.splice(records.length - n, n); }
+    } else if (entry.type === 'multi') {
+      const { tokens, locality, dd, MM, yyyy, hh, mm } = entry;
+      let added = 0;
+      for (const token of tokens) {
+        const row = processSpeciesToken(token, locality, dd, MM, yyyy, hh, mm, warnings);
+        if (row) { records.push(row); added++; }
+      }
+      if (added > 0) rowCounts.push(added);
+    } else {
+      let { speciesname, locality, dd, MM, yyyy, hh, mm, spoken_count } = entry;
+      let column_d = 1;
+      const numMatch = speciesname.match(/^(\d+)(.+)$/);
+      if (numMatch) { column_d = parseInt(numMatch[1]); speciesname = numMatch[2].trim(); }
+      else if (spoken_count !== null) { column_d = spoken_count; }
+      const ns = speciesname.replace(/ /g, '');
+      if (ns.length === 4 && /^[a-zA-Z]+$/.test(ns)) speciesname = ns.toUpperCase();
+      const coordMatch = locality.match(/\(([^,]+),([^)]+)\)$/);
+      if (!coordMatch) { warnings.push(`No coordinates in: "${locality}" — skipped`); continue; }
+      records.push([
+        speciesname, '', '', column_d, '', formatLocality(locality),
+        formatCoord(coordMatch[1]), formatCoord(coordMatch[2]),
+        `${MM}/${dd}/${yyyy}`, `${hh}:${mm}`, '', '', 'incidental', '', '', '', '', '', 'Checklist created with <a href="https://github.com/hnggong/birdlog" target="_blank">birdlog</a>'
+      ]);
+      rowCounts.push(1);
+    }
+  }
+  if (dates.length) {
+    const earliest = new Date(Math.min(...dates));
+    const y = earliest.getFullYear();
+    const m = String(earliest.getMonth()+1).padStart(2,'0');
+    const d = String(earliest.getDate()).padStart(2,'0');
+    csvFilename = `birdlog_ebird_${y}_${m}_${d}.csv`;
+  }
+  return { records, warnings };
+}
+
+function renderPreview(records, warnings) {
+  document.getElementById('status').textContent = `${records.length} record(s) found.`;
+  document.getElementById('warnings').innerHTML = warnings.map(w => `<div class="warn">⚠ ${w}</div>`).join('');
+  const tbody = document.getElementById('preview-body');
+  tbody.innerHTML = '';
+  records.forEach((row, rowIdx) => {
+    const tr = document.createElement('tr');
+    const numTd = document.createElement('td');
+    numTd.textContent = rowIdx + 1;
+    tr.appendChild(numTd);
+    [
+      { idx: 0, loc: false },
+      { idx: 3, loc: false },
+      { idx: 5, loc: true  },
+      { idx: 6, loc: false },
+      { idx: 7, loc: false },
+      { idx: 8, loc: false },
+      { idx: 9, loc: false },
+    ].forEach(({ idx, loc }) => {
+      const td = document.createElement('td');
+      if (loc) td.className = 'col-location';
+      td.textContent = row[idx];
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+  document.getElementById('preview').style.display = records.length ? 'table' : 'none';
+}
+
+function convert() {
+  const { records, warnings } = parseRecords();
+  csvRows = records;
+  renderPreview(records, warnings);
+}
+
+function convertAndDownload() {
+  const { records, warnings } = parseRecords();
+  csvRows = records;
+  renderPreview(records, warnings);
+  if (!csvRows.length) return;
+  const content = csvRows.map(row =>
+    row.map(c => { const s = String(c); return s.includes(',') || s.includes('"') ? `"${s.replace(/"/g,'""')}"` : s; }).join(',')
+  ).join('\r\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([content], { type: 'text/csv' }));
+  a.download = csvFilename;
+  a.click();
+}
+</script>
+
+</body>
+</html>

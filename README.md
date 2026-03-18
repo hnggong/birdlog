@@ -2,8 +2,6 @@
 
 A browser-based tool that converts birdlog notes, recorded via iPhone Shortcuts, into a CSV file ready for direct import into [eBird](https://ebird.org).
 
----
-
 ## Overview
 
 Birdlog is a two-part system:

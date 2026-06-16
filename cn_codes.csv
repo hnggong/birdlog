@@ -1,0 +1,541 @@
+code,species
+ABBW,Aberrant Bush Warbler
+ABFL,Asian Brown Flycatcher
+ABOW,Asian Barred Owlet
+ABWA,Aberrant Bush Warbler
+AEDO,Asian Emerald Dove
+AHMA,Asian House-Martin
+AMFA,Amur Falcon
+AMPF,Amur Paradise-Flycatcher
+AMST,Amur Stonechat
+APFL,Amur Paradise-Flycatcher
+APSW,Asian Palm Swift
+ARWA,Arctic Warbler
+ASBF,Asian Brown Flycatcher
+ASBO,Asian Barred Owlet
+ASDO,Asian Dowitcher
+ASDR,Ashy Drongo
+ASED,Asian Emerald Dove
+ASHM,Asian House-Martin
+ASKO,Asian Koel
+ASMI,Ashy Minivet
+ASPS,Asian Palm Swift
+ASST,Asian Stubtail
+ASTI,Asian Tit
+ASTL,Asian Short-toed Lark
+ASWO,Ashy Woodswallow
+ATPA,Ashy-throated Parrotbill
+ATWA,Ashy-throated Warbler
+AWMA,Azure-winged Magpie
+BAPO,Baer's Pochard
+BASW,Bank Swallow / Barn Swallow
+BATE,Baikal Teal
+BAWF,Blue-and-white Flycatcher
+BAWO,Bay Woodpecker
+BBBU,Brown-breasted Bulbul
+BBPL,Black-bellied Plover
+BBRW,Black-browed Reed Warbler
+BBSA,Broad-billed Sandpiper
+BBTH,Black-breasted Thrush
+BBTI,Black-browed Tit
+BBWA,Buff-barred Warbler
+BCBU,Black-crested Bulbul
+BCKI,Black-capped Kingfisher
+BCNH,Black-crowned Night Heron
+BCRA,Brown-cheeked Rail
+BCST,Black-collared Starling
+BCYU,Black-chinned Yuhina
+BEBA,Beijing Babbler
+BERE,Bearded Reedling
+BESI,Beautiful Sibia
+BESR,Besra
+BEVU,Bearded Vulture
+BFBU,Black-faced Bunting
+BFBW,Brownish-flanked Bush Warbler
+BFLA,Black-faced Laughingthrush
+BFRE,Blue-fronted Redstart
+BFSP,Black-faced Spoonbill
+BHGO,Bar-headed Goose
+BHGR,Black-headed Greenfinch
+BHGU,Black-headed Gull / Brown-headed Gull
+BHSH,Bull-headed Shrike
+BHSI,Black-headed Sibia
+BIWA,Bianchi's Warbler
+BLBU,Black Bulbul
+BLDR,Black Drongo
+BLEA,Black Eagle
+BLKI,Black Kite
+BLLW,Blyth's Leaf Warbler
+BLPF,Black Paradise-Flycatcher
+BLRE,Black Redstart
+BLRT,Blue Rock-Thrush
+BLST,Black Stork
+BLUE,Bluethroat
+BLWA,Blyth's Leaf Warbler
+BLWT,Blue Whistling-Thrush
+BNCR,Black-necked Crane
+BNMO,Black-naped Monarch
+BNOR,Black-naped Oriole
+BOWA,Bohemian Waxwing
+BPFL,Black Paradise-Flycatcher
+BRAC,Brown Accentor
+BRAM,Brambling
+BRCR,Brown Crake
+BRDI,Brown Dipper
+BRDR,Bronzed Drongo
+BRMA,Black-rumped Magpie
+BRMI,Brown-rumped Minivet
+BRSH,Brown Shrike
+BRTH,Blue Rock-Thrush
+BSSB,Black-streaked Scimitar-Babbler
+BTBA,Blue-throated Barbet
+BTGO,Bar-tailed Godwit / Black-tailed Godwit
+BTGU,Black-tailed Gull
+BTLA,Black-throated Laughingthrush
+BTSU,Black-throated Sunbird
+BTTI,Black-throated Tit
+BTWA,Buff-throated Warbler
+BWCU,Black-winged Cuckooshrike
+BWKI,Black-winged Kite
+BWMI,Blue-winged Minla
+BWST,Black-winged Stilt
+BWTH,Blue Whistling-Thrush
+CACR,Carrion Crow
+CATE,Caspian Tern
+CBPA,Chinese Bamboo-Partridge
+CBRT,Chestnut-bellied Rock-Thrush
+CCWA,Chestnut-crowned Warbler
+CEBU,Chestnut-eared Bunting
+CFWE,Chestnut-flanked White-eye
+CGSH,Chinese Gray Shrike
+CHBA,Chinese Babax / Chinese Barbet
+CHBL,Chinese Blackbird
+CHBP,Chinese Bamboo-Partridge
+CHBU,Chestnut Bulbul / Chestnut Bunting
+CHEG,Chinese Egret
+CHGS,Chinese Gray Shrike
+CHHW,Chinese Hwamei
+CHLW,Chinese Leaf Warbler
+CHPH,Chinese Pond-Heron
+CHPT,Chinese Penduline-Tit
+CHSP,Chinese Sparrowhawk
+CHTH,Chestnut Thrush / Chinese Thrush
+CIWA,Citrine Wagtail
+CLLW,Claudia's Leaf Warbler
+CLWA,Chinese Leaf Warbler / Claudia's Leaf Warbler
+COCR,Collared Crow / Common Crane
+COCU,Common Cuckoo
+COFI,Collared Finchbill
+COGO,Common Goldeneye
+COGR,Common Greenshank
+COGU,Common Gull
+COHO,Common Hoopoe
+COKI,Common Kingfisher
+COME,Common Merganser
+COMY,Common Myna
+COOW,Collared Owlet
+COPO,Common Pochard
+CORA,Common Raven
+CORE,Common Redshank
+CORO,Common Rosefinch
+COSA,Common Sandpiper
+COSH,Common Shelduck
+COSN,Common Snipe
+COSO,Collared Scops-Owl
+COSW,Common Swift
+COTA,Common Tailorbird
+COTE,Common Tern
+COTI,Coal Tit
+CPHE,Chinese Pond-Heron
+CPTI,Chinese Penduline-Tit
+CRFI,Crested Finchbill
+CRGO,Crested Goshawk
+CRKI,Crested Kingfisher
+CRLA,Crested Lark
+CRMY,Crested Myna
+CRSE,Crested Serpent-Eagle
+CRSU,Crimson Sunbird
+CSEA,Crested Serpent-Eagle
+CSOW,Collared Scops-Owl
+CUSA,Curlew Sandpiper
+CVNU,Chestnut-vented Nuthatch
+CWBR,Chinese White-browed Rosefinch
+DAFU,David's Fulvetta
+DAJA,Daurian Jackdaw
+DARE,Daurian Redstart
+DOLL,Dollarbird
+DSFL,Dark-sided Flycatcher
+DUNL,Dunlin
+DUTH,Dusky Thrush
+DUWA,Dusky Warbler
+EABU,Eastern Buzzard
+EACE,Eastern Cattle-Egret
+EACW,Eastern Crowned Warbler
+EAGR,Eared Grebe
+EAMH,Eastern Marsh Harrier
+EAYW,Eastern Yellow Wagtail
+ECDO,Eurasian Collared-Dove
+ECEG,Eastern Cattle-Egret
+ECMA,Eurasian Crag-Martin
+ECWA,Eastern Crowned Warbler
+ELLA,Elliot's Laughingthrush
+EMHA,Eastern Marsh Harrier
+ERRS,Eastern Red-rumped Swallow
+ESBD,Eastern Spot-billed Duck
+ETSP,Eurasian Tree Sparrow
+EUBI,Eurasian Bittern
+EUCD,Eurasian Collared-Dove
+EUCM,Eurasian Crag-Martin
+EUCO,Eurasian Coot
+EUCU,Eurasian Curlew
+EUGO,Eurasian Goshawk
+EUHO,Eurasian Hobby
+EUJA,Eurasian Jay
+EUKE,Eurasian Kestrel
+EUMO,Eurasian Moorhen
+EUNU,Eurasian Nuthatch
+EUOY,Eurasian Oystercatcher
+EUSI,Eurasian Siskin
+EUSK,Eurasian Skylark
+EUSP,Eurasian Sparrowhawk / Eurasian Spoonbill
+EUST,European Starling
+EUTS,Eurasian Tree Sparrow
+EUWH,Eurasian Whimbrel
+EUWI,Eurasian Wigeon
+EUWR,Eurasian Wren / Eurasian Wryneck
+EYTH,Eyebrowed Thrush
+EYWA,Eastern Yellow Wagtail
+FADU,Falcated Duck
+FAEC,Far Eastern Curlew
+FBFL,Fire-breasted Flowerpecker
+FECU,Far Eastern Curlew
+FEDU,Ferruginous Duck
+FLBU,Flavescent Bulbul
+FOWA,Forest Wagtail
+FTSU,Fork-tailed Sunbird
+GADW,Gadwall
+GARG,Garganey
+GBFU,Golden-breasted Fulvetta
+GBPR,Gray-breasted Prinia
+GBSH,Gray-backed Shrike
+GBTE,Gull-billed Tern
+GBTH,Gray-backed Thrush
+GBTI,Green-backed Tit
+GCGR,Great Crested Grebe
+GCMI,Gray-chinned Minivet
+GCPW,Gray-capped Pygmy Woodpecker
+GCTI,Gray-crested Tit
+GCWA,Gray-crowned Warbler
+GEBU,Gray-eyed Bulbul
+GFBU,Gray-faced Buzzard
+GHBU,Gray-headed Bullfinch
+GHCF,Gray-headed Canary-Flycatcher
+GHFU,Gray-hooded Fulvetta
+GHLA,Gray-headed Lapwing
+GHPA,Gray-headed Parrotbill
+GHWO,Gray-headed Woodpecker
+GILA,Giant Laughingthrush
+GNLA,Greater Necklaced Laughingthrush
+GOBU,Godlewski's Bunting
+GOEA,Golden Eagle
+GOLD,Goldcrest
+GRBA,Great Barbet
+GRBU,Gray Bushchat
+GRCG,Great Crested Grebe
+GRCO,Great Cormorant / Greater Coucal
+GREG,Great Egret
+GRGO,Graylag Goose
+GRHE,Gray Heron
+GRKN,Great Knot
+GRNI,Gray Nightjar
+GRNL,Greater Necklaced Laughingthrush
+GRSA,Green Sandpiper
+GRSC,Greater Scaup
+GRSP,Greater Sand-Plover
+GRSW,Great Spotted Woodpecker
+GRTD,Greater Racket-tailed Drongo
+GRTI,Ground Tit
+GRTR,Gray Treepie
+GRWA,Gray Wagtail / Greenish Warbler
+GSFL,Gray-streaked Flycatcher
+GSPL,Greater Sand-Plover
+GSSB,Gray-sided Scimitar-Babbler
+GSWO,Great Spotted Woodpecker
+GTBA,Golden-throated Barbet / Gray-throated Babbler
+GTTA,Gray-tailed Tattler
+GWFG,Greater White-fronted Goose
+GWTE,Green-winged Teal
+HABF,Hainan Blue Flycatcher
+HALW,Hartert's Leaf Warbler
+HAWF,Hawfinch
+HBFL,Hainan Blue Flycatcher / Hill Blue Flycatcher
+HBRO,Himalayan Beautiful Rosefinch
+HCDR,Hair-crested Drongo
+HEHA,Hen Harrier
+HIBF,Hill Blue Flycatcher
+HIBL,Himalayan Bluetail
+HIBR,Himalayan Beautiful Rosefinch
+HIBU,Himalayan Buzzard
+HICU,Himalayan Cuckoo
+HIGR,Himalayan Griffon
+HIPI,Hill Pigeon
+HISW,Himalayan Swiftlet
+HLWA,Hartert's Leaf Warbler
+HOCR,Hooded Crane
+HOLA,Horned Lark
+HORE,Hodgson's Redstart
+HOSP,House Sparrow
+HOSW,House Swift
+HOTR,Hodgson's Treecreeper
+HUFU,Huet's Fulvetta
+HUWA,Hume's Warbler
+INCU,Indian Cuckoo
+INWE,Indian White-eye
+INYU,Indochinese Yuhina
+ISWH,Isabelline Wheatear
+IWEY,Indian White-eye
+JAQU,Japanese Quail
+JASP,Japanese Sparrowhawk
+JATH,Japanese Thrush
+JAWA,Japanese Waxwing
+KEPL,Kentish Plover
+KLLW,Kloss's Leaf Warbler
+KLWA,Kloss's Leaf Warbler
+LAHC,Large Hawk-Cuckoo
+LANI,Large Niltava
+LBBG,Lesser Black-backed Gull
+LBCR,Large-billed Crow
+LBLW,Large-billed Leaf Warbler
+LBPL,Long-billed Plover
+LECO,Lesser Coucal
+LECU,Lesser Cuckoo
+LENL,Lesser Necklaced Laughingthrush
+LHCU,Large Hawk-Cuckoo
+LIBU,Little Bunting
+LIEG,Little Egret
+LIFO,Little Forktail
+LIGR,Little Grebe
+LIHE,Little Heron
+LIOW,Little Owl
+LIRP,Little Ringed Plover
+LITE,Little Tern
+LNLA,Lesser Necklaced Laughingthrush
+LRPL,Little Ringed Plover
+LTMI,Long-tailed Minivet
+LTRO,Long-tailed Rosefinch
+LTSH,Long-tailed Shrike
+LTST,Long-toed Stint
+LTTI,Long-tailed Tit
+LVBU,Light-vented Bulbul
+MABW,Manchurian Bush Warbler
+MADU,Mandarin Duck
+MALA,Masked Laughingthrush
+MALL,Mallard
+MAOR,Maroon Oriole
+MASA,Marsh Sandpiper
+MATI,Marsh Tit
+MBWA,Manchurian Bush Warbler
+MEBU,Meadow Bunting
+MEEG,Medium Egret
+MGSU,Mrs. Gould's Sunbird
+MOBU,Mountain Bulbul
+MOGU,Mongolian Gull
+MOTA,Mountain Tailorbird
+MRGS,Mrs. Gould's Sunbird
+MUFL,Mugimaki Flycatcher
+NAFL,Narcissus Flycatcher
+NATH,Naumann's Thrush
+NOLA,Northern Lapwing
+NOPI,Northern Pintail
+NOSH,Northern Shoveler
+OBLE,Orange-bellied Leafbird
+OBPI,Olive-backed Pipit
+OHBU,Oriental Honey-buzzard
+OMRO,Oriental Magpie-Robin
+ORGR,Oriental Greenfinch
+ORHB,Oriental Honey-buzzard
+ORMA,Oriental Magpie
+ORMR,Oriental Magpie-Robin
+ORPR,Oriental Pratincole
+ORRW,Oriental Reed Warbler
+ORSK,Oriental Skylark
+ORSO,Oriental Scops-Owl
+ORST,Oriental Stork
+ORSU,Ornate Sunbird
+ORTD,Oriental Turtle-Dove
+ORWA,Oriental Reed Warbler
+OSOW,Oriental Scops-Owl
+OSPR,Osprey
+OTDO,Oriental Turtle-Dove
+PABU,Pallas's Bunting
+PAGP,Pacific Golden-Plover
+PAGU,Pallas's Gull
+PALW,Pallas's Leaf Warbler
+PAMA,Pale Martin
+PASW,Pacific Swift
+PATH,Pale Thrush
+PDLA,Pere David's Laughingthrush
+PEDL,Pere David's Laughingthrush
+PEFA,Peregrine Falcon
+PGPL,Pacific Golden-Plover
+PIAV,Pied Avocet
+PIBU,Pine Bunting
+PIHA,Pied Harrier
+PIKI,Pied Kingfisher
+PLCU,Plaintive Cuckoo
+PLFL,Plain Flowerpecker
+PLLW,Pale-legged Leaf Warbler
+PLMF,Plain Mountain Finch
+PLPR,Plain Prinia
+PLRE,Plumbeous Redstart
+PLWA,Pallas's Leaf Warbler
+PMFI,Plain Mountain Finch
+PRRO,Pink-rumped Rosefinch
+PSTB,Pin-striped Tit-Babbler
+PTBA,Puff-throated Babbler
+PTBU,Puff-throated Bulbul
+PTJA,Pheasant-tailed Jacana
+PUHE,Purple Heron
+PYCU,Pygmy Cupwing
+RAWA,Radde's Warbler
+RBAC,Rufous-breasted Accentor
+RBBM,Red-billed Blue-Magpie
+RBCH,Red-billed Chough
+RBLE,Red-billed Leiothrix
+RBNI,Rufous-bellied Niltava
+RBST,Red-billed Starling
+RBWO,Rufous-bellied Woodpecker
+RCBA,Rufous-capped Babbler
+RCDO,Red Collared-Dove
+RCFU,Rusty-capped Fulvetta
+RCPO,Red-crested Pochard
+REBU,Reed Bunting
+RECD,Red Collared-Dove
+REGU,Relict Gull
+REKN,Red Knot
+REPA,Reed Parrotbill
+RFBA,Rusty-fronted Barwing
+RFBL,Red-flanked Bluetail
+RFWA,Rufous-faced Warbler
+RGFL,Rufous-gorgeted Flycatcher
+RHTR,Red-headed Trogon
+RIPI,Richard's Pipit
+RNPH,Ring-necked Pheasant
+RNSN,Rufous-necked Snowfinch
+RNST,Red-necked Stint
+ROAC,Robin Accentor
+ROOK,Rook
+ROPI,Rock Pigeon / Rosy Pipit
+RTLA,Red-tailed Laughingthrush
+RTMI,Red-tailed Minla
+RTPI,Red-throated Pipit
+RTRO,Rufous-tailed Robin
+RTTH,Red-throated Thrush
+RUBU,Rustic Bunting
+RUSH,Ruddy Shelduck
+RUSP,Russet Sparrow
+RUTU,Ruddy Turnstone
+RVBU,Red-vented Bulbul
+RVTI,Rufous-vented Tit
+RWBU,Red-whiskered Bulbul
+SAFA,Saker Falcon
+SAGU,Saunders's Gull
+SAND,Sanderling
+SBFL,Slaty-backed Flycatcher
+SBFO,Slaty-backed Forktail
+SBMU,Scaly-breasted Munia
+SBNU,Snowy-browed Nuthatch
+SBRO,Siberian Blue Robin
+SBSB,Streak-breasted Scimitar-Babbler
+SCMI,Scarlet Minivet
+SEME,Silver-eared Mesia
+SHBU,Sooty-headed Bulbul
+SIAC,Siberian Accentor
+SIBR,Siberian Blue Robin
+SICR,Siberian Crane
+SILW,Sichuan Leaf Warbler
+SIPH,Silver Pheasant
+SIPI,Siberian Pipit
+SIRU,Siberian Rubythroat
+SISP,Siberian Sand-Plover
+SIST,Siberian Stonechat
+SITI,Sichuan Tit
+SLWA,Sichuan Leaf Warbler
+SMEW,Smew
+SMNI,Small Niltava
+SONU,Southern Nutcracker
+SPDO,Spotted Dove
+SPFU,Spectacled Fulvetta
+SPPI,Speckled Piculet
+SPRE,Spotted Redshank
+SSPL,Siberian Sand-Plover
+STSA,Sharp-tailed Sandpiper
+STSP,Streaked Spiderhunter
+STTI,Silver-throated Tit
+STYU,Stripe-throated Yuhina
+SWEY,Swinhoe's White-eye
+SWGO,Swan Goose
+SWWE,Swinhoe's White-eye
+TABG,Taiga Bean-Goose
+TAFL,Taiga Flycatcher
+TBGO,Taiga Bean-Goose / Tundra Bean-Goose
+TBWA,Thick-billed Warbler / Two-barred Warbler
+TESA,Terek Sandpiper
+TEST,Temminck's Stint
+TILW,Tickell's Leaf Warbler
+TISH,Tiger Shrike
+TLWA,Tickell's Leaf Warbler
+TRBU,Tristram's Bunting
+TUBG,Tundra Bean-Goose
+TUDU,Tufted Duck
+TUSW,Tundra Swan
+TWIT,Twite
+UPBU,Upland Buzzard
+VEFL,Verditer Flycatcher
+VEGU,Vega Gull
+VIRO,Vinaceous Rosefinch
+VTPA,Vinous-throated Parrotbill
+WAPI,Water Pipit
+WBER,White-bellied Erpornis
+WBLA,White-browed Laughingthrush
+WBSB,White-browed Shrike-Babbler
+WBTH,White-backed Thrush
+WBWA,White-breasted Waterhen
+WCFO,White-crowned Forktail
+WCRE,White-capped Redstart
+WCST,White-cheeked Starling
+WCYU,White-collared Yuhina
+WHSW,Whooper Swan
+WHTE,Whiskered Tern
+WHTH,White's Thrush
+WHWA,White Wagtail
+WHYU,Whiskered Yuhina
+WITI,Willow Tit
+WNCR,White-naped Crane
+WOSA,Wood Sandpiper
+WRMU,White-rumped Munia
+WRSH,White-rumped Shama
+WRSN,White-rumped Snowfinch
+WSST,White-shouldered Starling
+WTEA,White-tailed Eagle
+WTFA,White-throated Fantail
+WTKI,White-throated Kingfisher
+WTNE,White-throated Needletail
+WTRE,White-throated Redstart
+WTRO,White-tailed Robin
+WWGR,White-winged Grosbeak
+WWTE,White-winged Tern
+YBBU,Yellow-breasted Bunting / Yellow-browed Bunting
+YBBW,Yellowish-bellied Bush Warbler
+YBFF,Yellow-bellied Fairy-Fantail
+YBGR,Yellow-billed Grosbeak
+YBPR,Yellow-bellied Prinia
+YBTI,Yellow-bellied Tit / Yellow-browed Tit
+YBWA,Yellow-browed Warbler
+YCTI,Yellow-cheeked Tit
+YEBI,Yellow Bittern
+YRFL,Yellow-rumped Flycatcher
+YSWA,Yellow-streaked Warbler
+YTBU,Yellow-throated Bunting
+YUFU,Yunnan Fulvetta
+ZICI,Zitting Cisticola
